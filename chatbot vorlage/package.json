@@ -1,0 +1,6 @@
+{
+  "name": "business-chatbot-vorlage",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Wiederverwendbare Chatbot-Vorlage fuer lokale Laeden jeder Art (Cafe, Friseur, Handwerk, Praxis, Boutique ...). Pro Kunde kopieren und nur business-config.js anpassen."
+}

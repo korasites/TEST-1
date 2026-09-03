@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Café Lumen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css" />
+</head>
+<body>
+
+  <!-- ==========================================================
+       Beispiel-Website — steht hier nur, damit sichtbar wird, wie
+       sich das Chat-Widget einfügt. Für ein echtes Kundenprojekt
+       wird dieser Inhalt durch die tatsächliche Website ersetzt;
+       das Widget (chat-widget.css / .js) bleibt unverändert.
+       ========================================================== -->
+
+  <nav class="nav">
+    <span class="nav__mark">Café Lumen</span>
+    <span class="nav__tag">Bahnhofstraße 4</span>
+  </nav>
+
+  <header class="hero">
+    <p class="hero__eyebrow">Geöffnet bis 18:00 Uhr</p>
+    <h1 class="hero__title">Kaffee, der<br>wach macht.<br><span class="hero__accent">Sonst nichts.</span></h1>
+    <p class="hero__sub">
+      Handverlesene Bohnen, hausgemachte Kuchen und ein Ort zum Ankommen —
+      mitten in der Stadt. Fragen? Der Chat unten rechts antwortet sofort.
+    </p>
+  </header>
+
+  <main class="grid">
+    <article class="card">
+      <span class="card__num">01</span>
+      <h3>Frühstück</h3>
+      <p>Bis 12 Uhr, jeden Tag frisch zubereitet.</p>
+    </article>
+    <article class="card">
+      <span class="card__num">02</span>
+      <h3>Für Gruppen</h3>
+      <p>Ab 6 Personen mit Reservierung.</p>
+    </article>
+    <article class="card">
+      <span class="card__num">03</span>
+      <h3>Zum Arbeiten</h3>
+      <p>WLAN, Steckdosen, ruhige Ecken.</p>
+    </article>
+  </main>
+
+  <!-- Chat-Widget-Bausteine -->
+  <link rel="stylesheet" href="chat-widget.css" />
+  <div id="chat-widget-root"></div>
+  <script src="chat-widget.js"></script>
+</body>
+</html>

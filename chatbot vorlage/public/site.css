@@ -1,0 +1,315 @@
+:root {
+  --ink: #16171B;
+  --paper: #FAFAF8;
+  --card: #F1F0EC;
+  --line: rgba(22, 23, 27, 0.1);
+  --muted: #6B6B66;
+  --accent: #FF5A36;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+
+.nav__mark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.nav__tag {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.hero {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+  text-align: left;
+}
+
+.hero__eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(255, 90, 54, 0.1);
+  padding: 0.3rem 0.7rem;
+  border-radius: 100px;
+  margin: 0 0 1.5rem;
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.6rem, 7vw, 4.2rem);
+  line-height: 1.05;
+  margin: 0 0 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.hero__accent { color: var(--accent); }
+
+.hero__sub {
+  max-width: 46ch;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.grid {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.card__num {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.card h3 {
+  font-family: var(--font-display);
+  margin: 0.6rem 0 0.3rem;
+  font-size: 1.1rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* ================================
+   Modern, clean chatbot redesign
+   ================================ */
+:root {
+  --paper: #f6f8fc;
+  --card: #ffffff;
+  --line: #e8ebf2;
+  --muted: #7b8494;
+  --accent: #6c63ff;
+  --accent-soft: #eeecff;
+  --success: #32c77a;
+  --shadow: 0 18px 50px rgba(35, 42, 60, 0.12), 0 3px 12px rgba(35, 42, 60, 0.06);
+}
+
+/* Main chatbot window */
+.chatbot,
+.chat-window,
+.chat-container {
+  width: min(100%, 390px);
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid rgba(32, 38, 52, 0.06);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+/* Header */
+.chatbot-header,
+.chat-header,
+.chat-window__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 20px;
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid var(--line);
+}
+
+.chatbot-header::before,
+.chat-header::before,
+.chat-window__header::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  flex: 0 0 10px;
+  border-radius: 50%;
+  background: var(--success);
+  box-shadow: 0 0 0 4px rgba(50, 199, 122, 0.12);
+}
+
+.chatbot-header h1,
+.chatbot-header h2,
+.chat-header h1,
+.chat-header h2,
+.chat-window__header h1,
+.chat-window__header h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+/* Message area */
+.chatbot-messages,
+.chat-messages,
+.chat-window__messages {
+  flex: 1;
+  min-height: 0;
+  padding: 22px 18px;
+  overflow-y: auto;
+  background: #fbfcfe;
+  scrollbar-width: thin;
+}
+
+.message,
+.chat-message {
+  max-width: 78%;
+  margin: 0 0 12px;
+  padding: 11px 14px;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.message.bot,
+.chat-message.bot,
+.message--bot,
+.chat-message--bot {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-bottom-left-radius: 5px;
+  box-shadow: 0 3px 10px rgba(35, 42, 60, 0.035);
+}
+
+.message.user,
+.chat-message.user,
+.message--user,
+.chat-message--user {
+  margin-left: auto;
+  color: #ffffff;
+  background: var(--accent);
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 5px 14px rgba(108, 99, 255, 0.18);
+}
+
+/* Composer */
+.chatbot-input-area,
+.chat-input-area,
+.chat-window__input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+  background: #ffffff;
+  border-top: 1px solid var(--line);
+}
+
+.chatbot-input-area input,
+.chat-input-area input,
+.chat-window__input input,
+.chatbot-input,
+.chat-input {
+  flex: 1;
+  min-width: 0;
+  height: 44px;
+  padding: 0 14px;
+  border: 1px solid #dfe3eb;
+  border-radius: 13px;
+  outline: none;
+  background: #f8f9fc;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.88rem;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.chatbot-input-area input::placeholder,
+.chat-input-area input::placeholder,
+.chat-window__input input::placeholder {
+  color: #a0a7b3;
+}
+
+.chatbot-input-area input:focus,
+.chat-input-area input:focus,
+.chat-window__input input:focus,
+.chatbot-input:focus,
+.chat-input:focus {
+  border-color: rgba(108, 99, 255, 0.5);
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(108, 99, 255, 0.09);
+}
+
+.chatbot-send,
+.chat-send,
+.chat-input-area button,
+.chatbot-input-area button,
+.chat-window__input button {
+  height: 44px;
+  padding: 0 17px;
+  border: 0;
+  border-radius: 13px;
+  background: var(--accent);
+  color: #ffffff;
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 650;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(108, 99, 255, 0.2);
+  transition: transform 140ms ease, box-shadow 140ms ease, filter 140ms ease;
+}
+
+.chatbot-send:hover,
+.chat-send:hover,
+.chat-input-area button:hover,
+.chatbot-input-area button:hover,
+.chat-window__input button:hover {
+  filter: brightness(1.04);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(108, 99, 255, 0.25);
+}
+
+.chatbot-send:active,
+.chat-send:active,
+.chat-input-area button:active,
+.chatbot-input-area button:active,
+.chat-window__input button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+  .chatbot,
+  .chat-window,
+  .chat-container {
+    width: 100%;
+    min-height: 100dvh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
